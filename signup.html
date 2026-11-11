@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub | Sign Up</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="auth-card">
+    <div class="auth-logo">🎓</div>
+    <h1>Student<span>Hub</span></h1>
+    <p class="subtitle">Create your demo account to get started.</p>
+
+    <form id="signupForm">
+      <label for="signupName">Full Name</label>
+      <input id="signupName" type="text" placeholder="Enter your name" required>
+
+      <label for="signupEmail">Email Address</label>
+      <input id="signupEmail" type="email" placeholder="Enter your email" required>
+
+      <label for="signupPassword">Password</label>
+      <input id="signupPassword" type="password" placeholder="Create a password" minlength="8" required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input id="confirmPassword" type="password" placeholder="Confirm your password" minlength="8" required>
+
+      <button class="auth-button" type="submit">Create Account</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+    <p class="auth-note">StudentHub Demo Project</p>
+  </main>
+  <script src="signup.js"></script>
+</body>
+</html>

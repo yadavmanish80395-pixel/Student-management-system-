@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2 class="brand">Student<span>Hub</span></h2>
+      <p class="menu-label">MENU</p>
+      <a class="nav-link active" href="#dashboard">▦ Dashboard</a>
+      <a class="nav-link" href="#students">♙ Students</a>
+      <div class="sidebar-bottom">
+        <p class="small-muted">STUDENT MANAGEMENT</p>
+        <button id="logoutBtn" class="logout-btn">↪ Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="small-muted">WELCOME BACK</p>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="profile">
+          <div class="avatar" id="userAvatar">S</div>
+          <div>
+            <strong id="userName">Student Admin</strong>
+            <p class="small-muted">Administrator</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="welcome-card">
+        <div>
+          <p class="welcome-tag">STUDENT MANAGEMENT SYSTEM</p>
+          <h2>Manage your students<br>with ease.</h2>
+          <p>Keep all your student records organized in one place.</p>
+        </div>
+        <div class="welcome-icon">🎓</div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon purple">♙</div>
+          <p>Total Students</p>
+          <h2 id="totalStudents">0</h2>
+          <span>Registered students</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon blue">▤</div>
+          <p>Total Courses</p>
+          <h2 id="totalCourses">0</h2>
+          <span>Unique courses</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon green">✓</div>
+          <p>System Status</p>
+          <h2 class="status-text">Active</h2>
+          <span>Your data is saved locally</span>
+        </article>
+      </section>
+
+      <section class="content-grid" id="students">
+        <article class="panel form-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="small-muted">STUDENT DETAILS</p>
+              <h2 id="formTitle">Add New Student</h2>
+            </div>
+            <span class="heading-icon">＋</span>
+          </div>
+
+          <form id="studentFormElement">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Enter student name" required>
+
+            <label for="roll">Roll Number</label>
+            <input id="roll" type="text" placeholder="Enter roll number" required>
+
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="student@example.com" required>
+
+            <label for="course">Course</label>
+            <select id="course" required>
+              <option value="">Select course</option>
+              <option value="B.Tech CSE">B.Tech CSE</option>
+              <option value="B.Tech AI">B.Tech AI</option>
+              <option value="BCA">BCA</option>
+              <option value="MCA">MCA</option>
+              <option value="BBA">BBA</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <button type="submit" id="submitBtn" class="primary-btn">＋ Add Student</button>
+            <button type="button" id="cancelBtn" class="secondary-btn hidden">Cancel Edit</button>
+          </form>
+        </article>
+
+        <article class="panel table-panel">
+          <div class="panel-heading table-heading">
+            <div>
+              <p class="small-muted">RECORD MANAGEMENT</p>
+              <h2>Student Records</h2>
+            </div>
+            <button id="exportBtn" class="export-btn">↓ Export CSV</button>
+          </div>
+
+          <input id="search" class="search-input" type="search"
+                 placeholder="Search by name, roll number or course...">
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>STUDENT</th>
+                  <th>ROLL NO.</th>
+                  <th>COURSE</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="studentList"></tbody>
+            </table>
+          </div>
+          <p id="emptyMessage" class="empty-message">No students added yet. Add your first student!</p>
+        </article>
+      </section>
+      <footer>© 2026 StudentHub. Built for learning and student management.</footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top left, #282052, transparent 40%),
+    #0b1020;
+  color: #edf1fa;
+  font-family: Arial, sans-serif;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px;
+  border-radius: 18px;
+  background: #151d30;
+  border: 1px solid #2b3650;
+  box-shadow: 0 20px 70px #0005;
+}
+
+.auth-logo {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 15px;
+  background: #30265f;
+  border-radius: 15px;
+  font-size: 27px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+}
+
+h1 span {
+  color: #9b87ff;
+}
+
+.subtitle {
+  color: #91a0b9;
+  text-align: center;
+  font-size: 13px;
+  margin: 12px 0 30px;
+}
+
+label {
+  display: block;
+  color: #c0c9d9;
+  font-size: 12px;
+  margin: 17px 0 8px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #2b3650;
+  border-radius: 8px;
+  background: #0e1729;
+  color: white;
+  outline: none;
+  font-size: 13px;
+}
+
+input:focus {
+  border-color: #8067f5;
+}
+
+input::placeholder {
+  color: #697791;
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 65px;
+}
+
+.password-wrap button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #b7a7ff;
+  cursor: pointer;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  background: #8067f5;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background: #6d55e8;
+}
+
+.auth-switch {
+  text-align: center;
+  color: #9aa8bd;
+  font-size: 12px;
+  margin-top: 23px;
+}
+
+.auth-switch a {
+  color: #b5a5ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-note {
+  text-align: center;
+  color: #64718a;
+  font-size: 10px;
+  margin-top: 30px;
+}
